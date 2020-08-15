@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Ride</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- <iframe width="0" height="0" src="https://www.youtuberepeater.com/watch?v=WKAGikW4mv8#gsc.tab=0" frameborder="0" allowfullscreen></iframe> -->
+        <style>
+             #master{
+            	position: absolute;
+            	top: 0;
+            	width: 100%;
+              	min-height: 100%;
+            	margin: 0 auto;
+            }
+
+            h1{
+                margin-left: 24.5rem;
+                margin-top: 12rem;
+                font-size: 4rem;
+                color: white;
+                text-shadow: 5px 3px #525452;
+            }  
+
+            .initial{
+                background-image: url(https://s5.gifyu.com/images/Kaysee---Rainbows--Sunshine-Official-Video-_-Basshole-Productions-WKAGikW4mv8_001_1.gif);
+                background-size: 1540px 750px;
+                /* background-size: cover; */
+            }
+
+            .sun{
+                background-image: url(https://s5.gifyu.com/images/Kaysee---Rainbows--Sunshine-Official-Video-_-Basshole-Productions-WKAGikW4mv8_001_1-1.gif);
+                background-size: 1540px 750px;
+            }
+
+            .rain{
+                background-image: url(https://s5.gifyu.com/images/Kaysee---Rainbows--Sunshine-Official-Video-_-Basshole-Productions-WKAGikW4mv8_001_2.gif);
+                background-size: 1540px 750px;
+            }
+
+            .rainbow{
+                background-image: url(https://s5.gifyu.com/images/Kaysee---Rainbows--Sunshine-Official-Video-_-Basshole-Productions-WKAGikW4mv8_002_1.gif);
+                background-size: 1540px 750px;
+            }
+
+            img{
+                margin-top: 21rem;
+                margin-left: 6rem;
+                width: 6rem;
+                height: 6rem;
+            }
+            #audio-control{
+                display: flex;
+                flex-direction: column;
+                margin: 3em auto;
+            }
+        </style>
+    </head>
+    <body>
+
+    <div id="master" class="initial sun rain rainbow">
+        <div class="container">
+            <h1 id="titleRide">The Ride</h1>
+            <audio id="audio-control" controls>
+                <source src="Kaysee.mp3" type="audio/mpeg">
+            </audio>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <img src="http://c.tadst.com/gfx/w/80/wt-1.png" alt="image not available">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <img src="https://c.tadst.com/gfx/w/80/wt-18.png" alt="image not available">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                    <img src="https://c.tadst.com/gfx/w/80/wt-33.png" alt="image not available">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //Getting all required elements
+        var master = document.querySelector("#master");
+        var logoOne = document.querySelectorAll("img");
+        var h1 = document.querySelector("h1");
+
+        master.classList.remove("sun");
+        master.classList.remove("rain");
+        master.classList.remove("rainbow");
+
+        logoOne[0].addEventListener("click",function(){
+            h1.textContent = "Sunshine";
+            master.classList.add("sun");
+            master.classList.remove("initial");
+            master.classList.remove("rain");
+            master.classList.remove("rainbow");
+        });
+
+        logoOne[1].addEventListener("click",function(){
+            h1.textContent = "Rain Fall";
+            master.classList.add("rain");
+            master.classList.remove("initial");
+            master.classList.remove("sun");
+            master.classList.remove("rainbow");
+        });
+
+        logoOne[2].addEventListener("click",function(){
+            h1.textContent = "Rainbows";
+            master.classList.add("rainbow");
+            master.classList.remove("initial");
+            master.classList.remove("rain");
+            master.classList.remove("sun");
+        });
+    </script>
+    </body>
+</html>
+
+
